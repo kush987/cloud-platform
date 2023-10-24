@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center vertically within the viewport */
+}
+
+.btn{
+    color: white;
+    background-color: #3f51b5;
+}
+.btnt{
+    justify-content: center;
+}
+.close{
+    margin-left: 80%;
+    margin-top: 10px;
+}

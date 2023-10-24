@@ -1,0 +1,171 @@
+/* .home-page { */
+    /* width: calc(100% - 60px); */
+
+/* } */
+
+.second-div {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    padding: 10px;
+}
+.card{
+    margin:0 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.head h1 {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'sans-serif';
+}
+
+.head {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 110px 0px 110px;
+}
+
+/* .first-button{
+    width: 100px;
+    height: 50px;
+} */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+.section-div {
+    /* margin:auto;
+
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 10px; */
+    flex: 0 2 calc(30% - 50px);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* Adjust the width as needed */
+}
+
+/* section {
+    margin-top: 50px;
+} */
+
+.section-div {
+    background-color: #f8f9fa;
+}
+
+.second-div h2 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.section-div p {
+    margin: 0;
+}
+
+/* section h2{
+    font-family: 'sans-serif';
+    font-weight: bold;
+    font-size: 25px;
+} */
+
+
+.div-detail {
+    display: flex;
+    justify-content: center;
+}
+
+.example-card {
+    margin-top: 20px;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+/* .card-container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+} */
+
+.card-container {
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    padding: 10px;
+    /* z-index: 1; */
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+/* .card-img:hover{
+    width:200px;
+    height: 100px;
+} */
+
+/* .example-card:hover{
+    background-color: #ffac1c3f;
+    cursor: pointer;
+} */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.example-card:hover {
+    /* box-shadow: rgba(255, 172, 28, 0.199) -10px 10px, rgba(255, 172, 28, 0.19) -20px 20px ; */
+    background-color: transparent;
+    position: relative;
+    margin-top: 10px;
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.10, 1.10);
+    z-index: 1;
+}
+
+.example-card img:hover {
+    /* z-index: 1; */
+    height: 100%;
+    /* transform: scale(1.10); */
+    /* opacity: 0.8; */
+}
+
+.next-step {
+    margin: auto;
+
+    margin-top: 40px;
+    width: auto;
+    height: 90px;
+    padding: 10px;
+}
+
+/* .nextstep2{
+    display: flex;
+    justify-content: space-evenly;
+} */

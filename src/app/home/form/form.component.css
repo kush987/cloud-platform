@@ -1,0 +1,26 @@
+.cont{
+    width: 662px;
+    height: 553px;
+    /* background-color: black; */
+}
+
+.header{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Center vertically within the viewport */
+    width: 50vw;
+  }
+  
+  /* .form-field {
+    margin-right: 10px; 
+  } */
+  
+.input-field{
+    margin: auto;
+}

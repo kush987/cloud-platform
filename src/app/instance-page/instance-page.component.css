@@ -1,0 +1,5 @@
+table td a {
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}

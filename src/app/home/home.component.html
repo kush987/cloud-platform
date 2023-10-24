@@ -1,0 +1,162 @@
+
+<div class="home-page">
+    <h2 style="font-size:20px;">My WorkSpace</h2>
+    <div class="container-fluid row bg-black border rounded-bottom" style="border-radius: 25px;">
+        <div class="col" style="color: white; font-size: 30px; font-weight:600px; padding-top: 2%;">
+            <p>Getting started guide</p>
+            <p style="font-size: 15px;">Here are some next steps to start building</p>
+        </div>
+       <img class="col" src="https://cloud.appwrite.io/_app/immutable/assets/intro-dark.73910b51.png"/>
+    </div>
+    <div class="second-div">
+        <!-- <div class="head">
+            
+        </div> -->
+        <div class="bottom">
+            <button class="first-button" mat-flat-button color="primary" (click)="formDialog()" >Get Started</button>
+            <button class="second-button" mat-stroked-button color="primary">View Details</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2 style="display: flex; justify-content: center;">Run workloads for free</h2>
+    <section>
+        <div class="section-div card" *ngFor="let item of list">
+            <div>
+                <h2 style="font-size:15px;">{{item.title}}</h2>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="second-section">
+        <h1 style="font-weight: 550; display: flex; justify-content: center;">Softwares and Appliation</h1>
+        <div class="div-detail">
+            <p>These many Applications are available in this cloud platform</p>
+        </div>
+    </section>
+        <div class="row">
+            <div class="col-sm-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="avatar"> <img
+                                src="data:image/png;base64,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">
+                        </div>
+                        <mat-card-title>Unreal Engine</mat-card-title>
+                        <mat-card-subtitle>Game development</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image
+                        src="https://eu-images.contentstack.com/v3/assets/blt95b381df7c12c15d/blta919904387078fbf/624cac0638d0aa0446081be4/placeholder-social.png"
+                        alt="Photo of a unreal engine">
+                    <div style="margin:auto;">
+                        <mat-card-content>
+                            <p>
+                                Unreal Engine is now on cloud to use for creating linear content like films, and for
+                                custom and internal projects.
+                                It’s also free in many cases for game development—a 5% royalty
+                                only kicks in if and when your title earns over $1 million USD.
+                            </p>
+                        </mat-card-content>
+                    </div>
+                    <div class="">
+                        <mat-card-actions>
+                            <button mat-button>View Details</button>
+                            <button mat-button>Check Requirement</button>
+                        </mat-card-actions>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="col-sm-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="avatar"><img
+                                src="https://www.pngmart.com/files/23/Blender-Logo-Transparent-PNG.png"></div>
+                        <mat-card-title>Blender</mat-card-title>
+                        <mat-card-subtitle>3d modeling</mat-card-subtitle>
+                    </mat-card-header>
+
+                    <img mat-card-image
+                        src="https://wiztoonz.com/wp-content/uploads/2022/04/Blender-Post-Intro-1170x658.jpg"
+                        alt="Photo of a Shiba Inu">
+                    <div style="margin:auto;">
+                        <mat-card-content>
+                            <p>
+                                Blender is now on cloud 3D creation suite. It supports the entirety of the 3D
+                                pipeline—modeling,
+                                rigging, animation, simulation, rendering, compositing and motion tracking,
+                                even video editing and game creation. Advanced users employ Blender’s API for
+                                Python scripting to customize the application and write specialized tools;
+                                often these are included in Blender’s future releases.
+                            </p>
+                        </mat-card-content>
+                    </div>
+                    <mat-card-actions>
+                        <button mat-button>View Details</button>
+                        <button mat-button>Check Requirement</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-sm-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="avatar"><img
+                                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a4c1e581950627.5d0f0adec8557.png">
+                        </div>
+                        <mat-card-title>Nvidia</mat-card-title>
+                        <mat-card-subtitle>Nvidia GPUs</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image
+                        src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/graphics-cards/geforce-ada-4090-web-og-1200x630@2x.jpg"
+                        alt="Photo of a Shiba Inu">
+                    <div style="margin:auto;">
+                        <mat-card-content>
+                            <p>
+                                NVIDIA RTX™ and NVIDIA Omniverse™ deliver the performance to help professionals,
+                                creators, developers, and students worldwide enhance creative workflows and build,
+                                operate, and connect metaverse applications.
+                            </p>
+                        </mat-card-content>
+                    </div>
+                    <mat-card-actions>
+                        <button mat-button>View Details</button>
+                        <button mat-button>Check Requirement</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+
+    <div class="container next-step" style="height: 250px; align-items: center; background-color: #f8f9fa;">
+        <div class="row" style="display:flex;">
+            <div style="text-align: left;" class="col">
+                <h1 style="display: flex; justify-content: left; align-items: center; font-weight: 500;">Take the
+                    next-step</h1><br>
+
+                <h3>Start running workloads on RCloud to increase your productivity <br>
+                    and time management. Just spin up for instances and access to your playground
+                </h3>
+                <br>
+                <button mat-flat-button color="primary" style="width:50%;">Get started</button>
+            </div>
+            <div class="col" style="margin: auto; border-left: 1px solid rgb(85, 82, 82); padding-left: 50px;">
+                <div>
+                    <h3 style="margin: 0px;"> Need Getting started ?</h3>
+                    <h3 style="font-size:15px; color:blue;">Contact sales</h3>
+                </div>
+                <div>
+                    <h3 style="margin: 0px;">Work with a trusted partner</h3>
+                    <h3 style="font-size:15px; color:blue;"> Find product</h3>
+                </div>
+                <div>
+                    <h3 style="margin: 0px;">Platform $10
+                        monthly credit</h3>
+                    <h3 style="font-size:15px; color:blue;">Learn more...</h3>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+
+
+<!-- <app-footer></app-footer> -->

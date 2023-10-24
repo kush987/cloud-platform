@@ -1,0 +1,20 @@
+
+<div class="cont"style="display: flex; flex-direction: column; padding:0;">
+    <div class="header" style="flex: 0 0 4%; background-color: rgb(47, 47, 201); display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="margin:auto;">Create WorkSpace</h3>
+    <div class="close" style="color: white;  position: absolute; top: 0; right: 0; padding: 5px;" (click)="close()"><i class="fa-solid fa-xmark fa-xl"></i></div>
+    </div>
+    <div class="row center-row" style="width: 100%; margin: 0px;">
+        <div class="col-md-4" >     
+              <form [formGroup]="projectForm" style="width: 100%; height: 100%;" (ngSubmit)="pdialog()">
+                <mat-form-field>
+                    <input matInput name="projectName" placeholder="Project Name" formControlName="projectName">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" name="projectId" placeholder="Project ID" formControlName="projectId">
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">create</button>
+            </form>
+        </div>
+    </div>
+</div>

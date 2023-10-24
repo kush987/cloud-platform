@@ -1,0 +1,32 @@
+
+<div class="row">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <form [formGroup]="userRegistration" (ngSubmit)="signUp()">
+              <mat-form-field>
+                <input matInput placeholder="Name" formControlName="fullName" name="name">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="User Name" formControlName="userName" name="username">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email" name="email">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password" name="password" email>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput type="password" placeholder="Confirm Password" formControlName="passwordConfirm" name="passwordConfirm">
+              </mat-form-field>
+              <button mat-raised-button color="primary" type="submit">Register</button>
+              <div class="text-center login">
+                Already have an account ? <a routerLink="/login">Login</a> here.
+              </div>
+              
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <swal #swal></swal> -->

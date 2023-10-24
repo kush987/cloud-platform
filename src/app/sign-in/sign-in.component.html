@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <!-- <div class="auth-avatar">
+            <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
+          </div> -->
+          <form [formGroup]="userLogin" (ngSubmit)="login()">
+            <mat-form-field>
+                <input matInput name="email" placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" name="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">Login</button>
+          </form>
+          <div class="text-center sign-up">
+            Don`t have an account ? <a routerLink="/sign-up">Sign Up</a> here.
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <app-header [loginState]="loginState"></app-header> -->

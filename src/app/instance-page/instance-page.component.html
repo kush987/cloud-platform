@@ -1,0 +1,31 @@
+<!-- <iframe src="http://localhost:32771" style="width:100%; height: 800px;" frameborder="0"></iframe> -->
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Container Id</th>
+        <th scope="col">Instance Name</th>
+        <th scope="col">Ip Address</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tabledata; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.container_id.container_id}}</td>
+        <td>{{item.container_id.instance_name}}</td>
+        <td><a href="{{item.ip_addresss}}"  target="_blank">{{item.ip_addresss}}</a></td>
+        <td>{{item.container_id.status}}</td>
+        <td>
+            <a (click)="startContainer(item)"><i class="fa-solid fa-play"></i></a>
+            <a (click)="stopContainer(item)"><i class="fa-solid fa-circle-pause"></i> </a> 
+            <a (click)="deleteContainer(item)"><i class="fa-solid fa-trash-can"></i></a>
+        </td>
+        <!-- <i class="fa-thin fa-trash-can"></i> -->
+      </tr>
+    </tbody>
+  </table>
+
+  

@@ -1,0 +1,69 @@
+/* Style the registration form container */
+.registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Style the form fields */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    width: 100%;
+  }
+  
+  /* Add some spacing between the button and form fields */
+  .button-spacing {
+    margin-top: 20px;
+  }
+  
+  /* Apply some additional styling to the form fields */
+  input.mat-input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the form field labels */
+  .mat-form-field-label {
+    color: #333;
+  }
+  
+  /* Style the required indicator */
+  .mat-form-field-required-marker {
+    color: red;
+  }
+  
+  /* Style the error messages */
+  .mat-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .login{
+    color: #030303;
+  }
+  .login a{
+    color: #032ad6;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }

@@ -1,0 +1,110 @@
+<!-- <div class="nav">
+<div class="toolbar" role="banner">
+    <img
+    routerLink=""
+      width="40"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    />
+    <span routerLink="">RCloud</span>
+    <div class="bar">
+        <div class="nav-bar" style="width: 50%;" *ngIf="searchState !== 'show'">
+            <div class="nav-first">
+                <span href="#">Overview</span>
+                <span href="#">Solution</span>
+                <span href="#">Products</span>
+                <span href="#">Pricing</span>
+                <span href="#">Resources</span>
+                <span href="#">Contact Us</span>
+            </div>
+        </div>
+            <div style="display: flex; justify-content: end;"
+            class="search-object"
+            [ngStyle]="{ width : searchState === 'show' ? '60%' : ''}">
+                <form class="search-container" [@searchAnimation]="searchState" style="justify-content: end;">
+                    <input class ="input-search"type="text" [style.width]="getWidth" placeholder="Search..." (keydown.enter)="performSearch()" >
+                    
+                </form>
+                <button mat-icon-button (click)="toggleSearch()">
+                    <mat-icon>search</mat-icon>
+                    </button>
+            </div>
+        <div class="end-nav"  style="width: 30%;"> 
+            <span href="#">Docs</span>
+            <span href="#">Support</span>
+            <span href="#">language</span>
+            <span href="#">Console</span>
+             <span *ngIf="!this.loginState"routerLink="/login">Login/Sign-up</span>
+             <span *ngIf="this.loginState" (click)="logOut()">Logout</span>
+        </div>
+    </div>
+  </div> -->
+
+<nav class="navbar navbar-expand navbar-dark bg-dark px-2">
+    <div class="side-nav-button p-2 me-3 text-light" (click)="sideNavToggle()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <a class="navbar-brand px-4" routerLink=""><b>RCloud</b></a>
+    <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Menu1</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Child1</a></li>
+                    <li><a class="dropdown-item" href="#">Child2</a></li>
+                    <li><a class="dropdown-item" href="#">Child3</a></li>
+                </ul>
+            </li> -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Softwares
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" routerLink="#">3D modeling</a></li>
+                    <li><a class="dropdown-item" routerLink="#">Game Development</a></li>
+                    <li><a class="dropdown-item" routerLink="#">Software Development</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Menu1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" routerLink="#">Action</a></li>
+                    <li><a class="dropdown-item" routerLink="#">Another action</a></li>
+                    <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Menu1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" routerLink="#">Action</a></li>
+                    <li><a class="dropdown-item" routerLink="#">Another action</a></li>
+                    <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <form class="d-flex me-5 " role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+
+    <div class="profile-logo">
+        <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">Kushal</button>
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+            <!-- <li><a class="dropdown-item" routerLink="/sign-up">Sign-up</a></li> -->
+            <li><a class="dropdown-item" routerLink="/login">Log In</a></li>
+            <li><a class="dropdown-item" routerLink="#">Your Profile</a></li>
+            <li><a class="dropdown-item" (click)="logOut()">Log Out</a></li>
+        </ul>
+    </div>
+</nav>
