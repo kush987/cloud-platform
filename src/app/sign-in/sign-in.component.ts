@@ -30,7 +30,6 @@ export class SignInComponent {
     // this.user.changeData(msg);z
   }
   async login() {
-    console.log(this.userLogin.value)
     this.apiCall.signInUser(this.userLogin.value).subscribe({next: (data: any) => {
       if (data) {
         Swal.fire({

@@ -5,9 +5,11 @@ import { AnimateTimings } from '@angular/animations';
 import { UserService } from '../service/user.service';
 import Swal from 'sweetalert2';
 import { InstanceService } from '../service/instance.service';
+import { WorkspaceService } from '../service/workspace.service';
 
 export interface instanceObject{
   user_id:string,
+  projectId:string,
   instance:string,
   username:string
 }
@@ -21,18 +23,26 @@ export class DialogBoxComponent {
   constructor(
     public dialogRef: MatDialogRef<SystemOptionComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any,
-    private instanceCall: InstanceService
+    private instanceCall: InstanceService,
+    private workSpaceAPI: WorkspaceService,
   ) {
   }
   token:any;
   user_id:any;
   username:any;
+  dropdownOption:any;
+  selectedOption: any;
   ngOnInit(){
    this.token = localStorage.getItem('Token') 
    this.user_id = localStorage.getItem('User_id') ?? '';
    this.username = localStorage.getItem('Username');
+   this.selectOption();
   }
-
+  showSelectedOption() {
+    if (this.selectedOption) {
+      console.log('Selected option:', this.selectedOption);
+    }
+  }
   onNoClick(): void {
     this.dialogRef.close();
   }
@@ -45,22 +55,31 @@ export class DialogBoxComponent {
     }
     return result;
   }
+
+  selectOption(){
+    
+    this.workSpaceAPI.getWorkSpace(this.user_id).subscribe({next: (res:any)=>{
+      this.dropdownOption = res.data;
+    },error: (err:any)=>{
+      console.log(err);
+    }})
+  }
   createInstance(){
     this.onNoClick()
     const instanceData: instanceObject = {
       user_id: this.user_id,
+      projectId: this.selectedOption,
       instance:this.data.title.toLowerCase(),
       username: this.username + this.user_id + '-' + this.generateRandomString(6)
     }
     this.instanceCall.createInstance(instanceData).subscribe({next: (data:any)=>{
-      if(data.message === "please create your project workspace"){
+      if(data.message === "please select your project workspace"){
         Swal.fire({title:`${data.message}` , icon:'warning'})
       }else{
         Swal.fire({title:'Good Job',text:'your instace has been created',icon:'success'})
       }
     }, error:(error:any)=>{
-      console.log(error,"error")
-      Swal.fire('Error!', `${error.error.message}`, 'error')
+      Swal.fire({title:'Warning!', text:`${error.error}`, icon:'warning'})
     }})
   }
 }

@@ -26,7 +26,7 @@ import { AuthInterceptor } from 'src/customFolder/auth.interceptor';
 import { InstancePageComponent } from './instance-page/instance-page.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { CreateSpaceComponent } from './create-space/create-space.component';
-import { FormComponent } from './home/form/form.component';
+import { FormComponent } from './form/form.component';
 import { MatSelectModule } from '@angular/material/select';
 // import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 // import { DialogComponent } from './dialogForm/dialog/dialog.component';

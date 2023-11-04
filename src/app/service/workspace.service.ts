@@ -13,4 +13,12 @@ export class WorkspaceService {
   createWorkspace(data: any){
     return this.http.post(`${this.apiUrl}/create`,data);
   }
+
+  getWorkSpace(data:any){
+    return this.http.get(`${this.apiUrl}/get-workspace/${data}`)
+  }
+
+  deleteWorkSpace(data:any){
+    return this.http.delete(`${this.apiUrl}/delete-workspace/${data}`);
+  }
 }

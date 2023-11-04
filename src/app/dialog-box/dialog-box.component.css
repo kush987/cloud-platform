@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Center vertically within the viewport */
+    text-align: center; 
 }
 
 .btn{
@@ -12,8 +12,13 @@
 }
 .btnt{
     justify-content: center;
+} 
+.head{
+    margin-top: 20px;
+    align-items: center;
 }
-.close{
-    margin-left: 80%;
-    margin-top: 10px;
+.container
+{
+width: 350px;
+
 }

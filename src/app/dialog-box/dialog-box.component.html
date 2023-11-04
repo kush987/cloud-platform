@@ -1,53 +1,23 @@
-
-<div style="display: flex; justify-content: space-evenly;">
-    <h1 mat-dialog-title style="margin-left: 20px; margin-top: 5px; font-size:xx-large"><b>{{data.title}}</b></h1>
-<mat-icon  class ="close" (click)="onNoClick()" aria-hidden="false" fontIcon="close"></mat-icon>
-</div>
-<div mat-dialog-content style="display: flex; ">
-    <div style="margin-left: 30px;">
-    <h2>Minimum Requirements</h2>
-    <b>Operating System:</b>
-    <br>
-    Windows: Windows 8 or later (64-bit)
-    <br>
-    macOS: macOS 10.13 or later
-    <br>
-    Linux: Ubuntu 16.04 or later
-    <br>
-    Processor: Multi-core CPU with 64-bit support, such as Intel Core i5 or AMD Ryzen 5 (or equivalent)
-    <br>
-    Memory (RAM): 8 GB or more
-    <br>
-    Graphics Card:
-    <br>
-    <p>
-    OpenGL 3.3 or higher compatible graphics card
-    NVIDIA, AMD, or Intel graphics card with at least 1 GB VRAM recommended
-    For GPU rendering, a CUDA or OpenCL compatible GPU is recommended
-    Hard Drive Space: 10 GB of free hard drive space for installation and cache files
-</p>
-<br>
-    Recommended Requirements (for Better Performance):
-    <br>
-    Processor: Multi-core CPU with high clock speed (e.g., Intel Core i7 or AMD Ryzen 7)
-    <br>
-    Memory (RAM): 16 GB or more
-    <br>
-    Graphics Card:
-    <p>
-        A dedicated graphics card with 4 GB VRAM or more is recommended for complex scenes and GPU rendering.
-        NVIDIA GeForce GTX series or AMD Radeon RX series graphics cards are good choices.
-    </p>
-</div>
-</div>
-<!-- <div mat-dialog-content>
-    <p>rest</p>
-</div> -->
-<div class="content">
-<div mat-dialog-actions style="margin-top:20px; margin-bottom: 10px;">
-    <div class ="btnt"style="display: flex; justify-content: center;">
-    
-    <button class="btn" (click)="createInstance()">Start instance</button>
+<div class="container">
+    <div style="align-items: center; flex-direction: row; display: flex; justify-content: space-between;">
+        <h1 class="head"><b>{{data.title}}</b></h1>
+        <mat-icon class="close" (click)="onNoClick()" aria-hidden="false" fontIcon="close"></mat-icon>
     </div>
-</div>
+    <div mat-dialog-content>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <mat-form-field style="width: 100%;">
+                <mat-label>Select an option:</mat-label>
+                <mat-select [(ngModel)]="selectedOption" name="selectedOption">
+                    <mat-option *ngFor="let option of dropdownOption" [value]="option.projectId">{{ option.projectName }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="content">
+                <div mat-dialog-actions style="margin-top: 20px; margin-bottom: 10px;">
+                    <div style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-primary" (click)="createInstance()">Start Instance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

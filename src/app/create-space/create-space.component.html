@@ -1,1 +1,29 @@
-<p>create-space works!</p>
+<div class="container" style="align-items: center;">
+
+    <h1 style="margin-bottom: 0px;">Your WorkSpace</h1>
+    <button class="btn btn-outline-primary" style="padding:3px 15px; align-items: centers;" (click)="formDialog()">+New</button>
+</div>
+<div class="container-fluid">
+    <div class="card" *ngFor="let item of workspaceData">
+        <div class="card-body">
+            <div style="display: flex; justify-content: space-between;">
+    
+                <h2 class="card-title">{{item.projectName}}</h2>
+                <div class="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical"(click)="showDropdown(item.projectId)"></i>
+                    <div id="mydropDown_{{item.projectId}}" class="dropdown-menu dropdown-menu-left">
+                      <button class="dropdown-item" type="button">View</button>
+                      <button class="dropdown-item" type="button">Edit</button>
+                      <button class="dropdown-item" type="button">Delete</button>
+                    </div>
+                  </div>
+            </div>
+          <!-- <h6 class="card-subtitle mb-2 text-body-secondary"></h6> -->
+          <p class="card-text">{{item.projectDesc}}</p>
+          
+            <button class="btn btn-outline-primary btnsize" style="margin-right:10px">Edit</button>
+            <button class="btn btn-outline-danger btnsize" style="margin-right:10px" (click)="deleteProject(item)">Delete</button>
+          
+        </div>
+      </div>
+</div>

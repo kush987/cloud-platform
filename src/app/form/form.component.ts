@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from '../home.component';
+import { HomeComponent } from '../home/home.component';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormControl, FormGroup } from '@angular/forms';
 import { WorkspaceService } from 'src/app/service/workspace.service';
@@ -18,6 +18,7 @@ export class FormComponent {
   ngOnInit(){
     this.projectForm = new FormGroup({
       projectName: new FormControl(),
+      projectDesc:new FormControl(),
       projectId: new FormControl()
     })
     this.projectForm.reset();
