@@ -21,7 +21,7 @@ export class InstancePageComponent {
     this.apiCall.getAllInstance(this.user_id).subscribe({
       next: (data:any)=>{
         this.tabledata = data.data.map((item: any) => {
-          item.ip_addresss = item.ip_addresss.replace('0.0.0.0', 'http://localhost');
+          item.ip_addresss = item.ip_address.replace('0.0.0.0', 'http://localhost');
           return item;
         });
       }
@@ -36,10 +36,10 @@ export class InstancePageComponent {
     }
     this.apiCall.startInstance(data,this.user_id).subscribe({next: (data:any)=>{
       Swal.fire('Good job', 'Your instance has been started', 'success')
+      this.getAllData();
     },error:(error:any) =>{
       Swal.fire('Error', 'Your instance was not able started', 'error')
     }})
-    this.getAllData();
   }
 
   stopContainer(item:any){
@@ -48,10 +48,10 @@ export class InstancePageComponent {
     }
     this.apiCall.stopInstance(data,this.user_id).subscribe({next: (data:any)=>{
       Swal.fire('Good job', 'Your instance has been stoped', 'success')
+      this.getAllData();
     },error:(error:any) =>{
       Swal.fire('Error', 'Your instance was not able stoped', 'error')
     }})
-    this.getAllData();
   }
 
   deleteContainer(item:any){
@@ -60,10 +60,10 @@ export class InstancePageComponent {
     }
     this.apiCall.deleteInstance(data).subscribe({next: (data:any)=>{
       Swal.fire('Good job', 'Your instance has been deleted', 'success')
+      this.getAllData();
     },error:(error:any) =>{
       Swal.fire('Error', 'Your instance was not able deleted', 'error')
     }})
-    this.getAllData();
   }
 
   stringChanges(item: string){

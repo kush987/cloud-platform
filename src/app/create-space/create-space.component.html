@@ -21,7 +21,7 @@
           <!-- <h6 class="card-subtitle mb-2 text-body-secondary"></h6> -->
           <p class="card-text">{{item.projectDesc}}</p>
           
-            <button class="btn btn-outline-primary btnsize" style="margin-right:10px">Edit</button>
+            <button class="btn btn-outline-primary btnsize" style="margin-right:10px" (click)="editWorkspace(item)">Edit</button>
             <button class="btn btn-outline-danger btnsize" style="margin-right:10px" (click)="deleteProject(item)">Delete</button>
           
         </div>

@@ -29,6 +29,14 @@ export class CreateSpaceComponent {
     });
   }
 
+  editWorkspace(item:any){
+    const dialogRef = this.dialog.open(FormComponent, {data:item});
+    dialogRef.afterClosed().subscribe(result => {
+      this.formRequirement = true;
+      this.getWorkspace();
+    })
+  }
+
   getWorkspace() {
     let userId = localStorage.getItem('User_id');
     this.workSpaceAPI.getWorkSpace(userId).subscribe({
@@ -47,9 +55,11 @@ export class CreateSpaceComponent {
         this.getWorkspace();
       }, error: (err: any) => {
         Swal.fire({ "title": "Error to delete", "icon": "warning" })
+        this.getWorkspace();
       }
     })
   }
+  
   showDropdown(projectId:any){
     const dropdown = document.getElementById(`mydropDown_${projectId}`);
     
