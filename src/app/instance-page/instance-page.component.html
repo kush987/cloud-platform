@@ -5,6 +5,7 @@
       <tr>
         <th scope="col">S.No</th>
         <th scope="col">Container Id</th>
+        <th scope="col">App Name</th>
         <th scope="col">Instance Name</th>
         <th scope="col">Ip Address</th>
         <th scope="col">Status</th>
@@ -15,6 +16,7 @@
       <tr *ngFor="let item of tabledata; let i = index">
         <th scope="row">{{i+1}}</th>
         <td>{{item.container_id.container_id}}</td>
+        <td>{{item.container_id.appName}}</td>
         <td>{{item.container_id.instance_name}}</td>
         <td><a href="{{item.ip_addresss}}"  target="_blank">{{item.ip_addresss}}</a></td>
         <td>{{item.container_id.status}}</td>

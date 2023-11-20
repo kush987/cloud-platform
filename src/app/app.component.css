@@ -6,6 +6,9 @@ app-header {
     z-index: 2;
 }
 
+.app-header{
+    left: 4rem;
+}
 main {
     position: absolute;
     width: 100%;

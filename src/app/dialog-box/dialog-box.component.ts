@@ -9,6 +9,7 @@ import { WorkspaceService } from '../service/workspace.service';
 
 export interface instanceObject{
   user_id:string,
+  appName:string,
   projectId:string,
   instance:string,
   username:string
@@ -32,6 +33,7 @@ export class DialogBoxComponent {
   username:any;
   dropdownOption:any;
   selectedOption: any;
+  appName: any;
   ngOnInit(){
    this.token = localStorage.getItem('Token') 
    this.user_id = localStorage.getItem('User_id') ?? '';
@@ -68,6 +70,7 @@ export class DialogBoxComponent {
     this.onNoClick()
     const instanceData: instanceObject = {
       user_id: this.user_id,
+      appName: this.appName,
       projectId: this.selectedOption,
       instance:this.data.title.toLowerCase(),
       username: this.username + this.user_id + '-' + this.generateRandomString(6)

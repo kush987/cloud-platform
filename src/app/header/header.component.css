@@ -125,3 +125,15 @@
     background-color: rgba(255,255,255,0.2);
     border-radius: 30%;
   }
+
+  .responsive-dropdown {
+    left: 80%; /* Default position */
+  }
+
+@media (min-width: 576px) {
+    .responsive-dropdown {
+        left: 80%; /* Adjust for screens wider than 576px */
+    }
+}
+
+

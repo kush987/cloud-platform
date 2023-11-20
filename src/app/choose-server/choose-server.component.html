@@ -1,0 +1,16 @@
+<div class="">
+    <!-- <h1 style="margin-left: 20px;">Choose Server</h1> -->
+
+
+    <div class="server-type" style="display:flex;">
+
+
+        <div class="card text-center" style="width: 18rem; margin-right: 20px;" *ngFor="let item of systemoOption">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.desc}}</p>
+                <a href="#" class="btn btn-primary">{{item.type}}</a>
+            </div>
+        </div>
+    </div>
+</div>

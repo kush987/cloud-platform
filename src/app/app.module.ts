@@ -28,6 +28,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { CreateSpaceComponent } from './create-space/create-space.component';
 import { FormComponent } from './form/form.component';
 import { MatSelectModule } from '@angular/material/select';
+import { ChooseServerComponent } from './choose-server/choose-server.component';
 // import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 // import { DialogComponent } from './dialogForm/dialog/dialog.component';
 @NgModule({
@@ -45,6 +46,7 @@ import { MatSelectModule } from '@angular/material/select';
     SideNavComponent,
     CreateSpaceComponent,
     FormComponent,
+    ChooseServerComponent,
   ],
   imports: [
     BrowserModule,

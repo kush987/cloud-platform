@@ -5,12 +5,17 @@
     </div>
     <div mat-dialog-content>
         <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <mat-form-field style="width:100%;">
+                <mat-label>App name:</mat-label>
+                <input matInput [(ngModel)]="appName" name="appName">
+            </mat-form-field>
             <mat-form-field style="width: 100%;">
                 <mat-label>Select an option:</mat-label>
                 <mat-select [(ngModel)]="selectedOption" name="selectedOption">
                     <mat-option *ngFor="let option of dropdownOption" [value]="option.projectId">{{ option.projectName }}</mat-option>
                 </mat-select>
             </mat-form-field>
+
             <div class="content">
                 <div mat-dialog-actions style="margin-top: 20px; margin-bottom: 10px;">
                     <div style="display: flex; justify-content: center;">
